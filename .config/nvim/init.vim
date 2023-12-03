@@ -15,10 +15,10 @@ imap <C-p> <Up>
 imap <C-n> <Down>
 imap <C-b> <Left>
 imap <C-f> <Right>
-imap <C-e> <end>
-imap <C-a> <home>
-nnoremap <C-e> <end>
-nnoremap <C-a> <home>
+imap <C-e> <End>
+imap <C-a> <Home>
+nnoremap <C-e> <End>
+nnoremap <C-a> <Home>
 nnoremap gh <C-w>h
 nnoremap gj <C-w>j
 nnoremap gk <C-w>k
@@ -33,6 +33,8 @@ nnoremap tft <cmd>Telescope live_grep<cr>
 nnoremap tgs <cmd>Telescope git_status<cr>
 nnoremap tgc <cmd>Telescope git_commits<cr>
 nnoremap tgb <cmd>Telescope git_branches<cr>
+vnoremap <C-e> <End>
+vnoremap <C-a> <Home>
 
 call plug#begin()
 Plug 'preservim/nerdtree'
