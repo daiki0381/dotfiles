@@ -17,9 +17,8 @@ imap <C-b> <Left>
 imap <C-f> <Right>
 imap <C-e> <end>
 imap <C-a> <home>
-imap <C-k> <esc>lc$
-nnoremap <C-e> $
-nnoremap <C-a> 0
+nnoremap <C-e> <end>
+nnoremap <C-a> <home>
 nnoremap gh <C-w>h
 nnoremap gj <C-w>j
 nnoremap gk <C-w>k
@@ -48,7 +47,6 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'nvim-tree/nvim-web-devicons'
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'folke/tokyonight.nvim'
-Plug 'folke/noice.nvim'
 Plug 'MunifTanjim/nui.nvim'
 Plug 'https://github.com/lewis6991/gitsigns.nvim'
 Plug 'akinsho/toggleterm.nvim', {'tag' : '*'}
@@ -66,9 +64,6 @@ set termguicolors
 
 " bufferline
 lua require("bufferline").setup{}
-
-" noice 
-lua require("noice").setup()
 
 " gitsigns
 lua << EOF
