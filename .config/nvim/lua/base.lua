@@ -1,4 +1,5 @@
 vim.cmd('autocmd!')
+vim.cmd('syntax on')
 
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
@@ -26,16 +27,13 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.ai = true
 vim.opt.si = true
+vim.opt.clipboard = 'unnamed'
 vim.opt.backspace = 'start,eol,indent'
 vim.opt.path:append {'**'}
+vim.opt.formatoptions:append { 'r' }
 vim.opt.wildignore:append {'*/node_modules/*'}
-vim.opt.clipboard = 'unnamed'
-
-vim.cmd('syntax on')
 
 vim.api.nvim_create_autocmd("InsertLeave", {
   pattern = '*',
   command = "set nopaste"
 })
-
-vim.opt.formatoptions:append { 'r' }
