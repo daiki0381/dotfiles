@@ -67,6 +67,7 @@ packer.startup(function(use)
 			"nvim-lua/plenary.nvim",
 			"nvim-tree/nvim-web-devicons",
 			"MunifTanjim/nui.nvim",
+			"3rd/image.nvim",
 			{
 				"s1n7ax/nvim-window-picker",
 				version = "2.*",
@@ -97,5 +98,5 @@ packer.startup(function(use)
 	use({
 		"nvimtools/none-ls.nvim",
 		requires = "nvim-lua/plenary.nvim",
-  })
+	})
 end)
