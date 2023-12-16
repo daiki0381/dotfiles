@@ -11,7 +11,6 @@ treesitter.setup({
 		enable = true,
 	},
 	ensure_installed = "all",
-	ignore_install = { "wing" },
 	autotag = {
 		enable = true,
 	},
