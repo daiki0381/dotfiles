@@ -8,35 +8,18 @@ vim.cmd([[packadd packer.nvim]])
 packer.startup(function(use)
 	-- plugin manager
 	use("wbthomason/packer.nvim")
-	-- improve startup time
-	use("lewis6991/impatient.nvim")
-	-- color scheme
-	-- use("folke/tokyonight.nvim")
-	use("neanias/everforest-nvim")
-	-- auto pairs
-	use("windwp/nvim-autopairs")
-	-- auto tag
-	use("windwp/nvim-ts-autotag")
-	-- auto end
-	use("RRethy/nvim-treesitter-endwise")
 	-- startup screen
 	use({
 		"goolord/alpha-nvim",
 		requires = "nvim-tree/nvim-web-devicons",
 	})
+	-- improve startup time
+	use("lewis6991/impatient.nvim")
+	-- color scheme
+	-- use("folke/tokyonight.nvim")
+	use("neanias/everforest-nvim")
 	-- status line
 	use("hoob3rt/lualine.nvim")
-	-- indent highlight
-	use("lukas-reineke/indent-blankline.nvim")
-	-- git
-	use("dinhhuy258/git.nvim")
-	use("lewis6991/gitsigns.nvim")
-	-- tab
-	use({
-		"akinsho/bufferline.nvim",
-		tag = "*",
-		requires = "nvim-tree/nvim-web-devicons",
-	})
 	-- notice
 	use({
 		"folke/noice.nvim",
@@ -45,6 +28,8 @@ packer.startup(function(use)
 			"rcarriga/nvim-notify",
 		},
 	})
+	-- indent highlight
+	use("lukas-reineke/indent-blankline.nvim")
 	-- syntax highlight
 	use({
 		"nvim-treesitter/nvim-treesitter",
@@ -53,11 +38,20 @@ packer.startup(function(use)
 			ts_update()
 		end,
 	})
-	-- fuzzy finder
+	-- git
+	use("dinhhuy258/git.nvim")
+	use("lewis6991/gitsigns.nvim")
+	-- auto pairs
+	use("windwp/nvim-autopairs")
+	-- auto tag
+	use("windwp/nvim-ts-autotag")
+	-- auto end
+	use("RRethy/nvim-treesitter-endwise")
+	-- tab
 	use({
-		"nvim-telescope/telescope.nvim",
-		tag = "0.1.5",
-		requires = "nvim-lua/plenary.nvim",
+		"akinsho/bufferline.nvim",
+		tag = "*",
+		requires = "nvim-tree/nvim-web-devicons",
 	})
 	-- filer
 	use({
@@ -73,6 +67,12 @@ packer.startup(function(use)
 				version = "2.*",
 			},
 		},
+	})
+	-- fuzzy finder
+	use({
+		"nvim-telescope/telescope.nvim",
+		tag = "0.1.5",
+		requires = "nvim-lua/plenary.nvim",
 	})
 	-- LSP
 	use({
