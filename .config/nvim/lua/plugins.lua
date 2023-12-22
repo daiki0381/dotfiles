@@ -41,6 +41,8 @@ packer.startup(function(use)
 	-- git
 	use("dinhhuy258/git.nvim")
 	use("lewis6991/gitsigns.nvim")
+  -- GitHub Copilot
+	use("github/copilot.vim")
 	-- auto pairs
 	use("windwp/nvim-autopairs")
 	-- auto tag
